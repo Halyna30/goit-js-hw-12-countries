@@ -1,14 +1,16 @@
 console.log('Hello from index.js-1');
 
-var debounce = require('debounce');
-// var debounce = require('lodash.debounce');
-// console.log(debounce);
+// import { debounce } from 'debounce';
+// var debounce = require('debounce');
+
+var debounce = require('lodash.debounce');
+console.log(debounce);
 
 const inputRef = document.querySelector('#exampleDataList');
 
 inputRef.addEventListener(
   'input',
-  debounce(event => {
+  _.debounce(event => {
     console.log(event.data);
   }, 500),
 );
