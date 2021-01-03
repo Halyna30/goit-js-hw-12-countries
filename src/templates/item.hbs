@@ -1,0 +1,14 @@
+{{#each this}}
+<li class="listItem">
+  <h2>{{nativeName}}</h2> 
+      <img src="{{flag}}" width="200" alt="прапор {{nativeName}}">
+      <p>Столиця: {{capital}}</p>
+    <p>Населення: {{population}} людей</p>
+    <p>Мова: {{languages}}</p>
+    <p>Часовий пояс: {{timezones}}</p>
+    <p>Валюта: {{currencies}}</p>
+    <p>Телефонний код країни: {{callingCodes}}</p>
+    <p>Домен: {{alpha2Code}},{{alpha3Code}}</p>
+
+</li>
+{{/each}}

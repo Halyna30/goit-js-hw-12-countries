@@ -1,22 +1,19 @@
-console.log('Hello from index.js-1');
+import fetchCountries from './js/fetch.js';
+import updateMarkup from './js/update-markup';
 
-// import { debounce } from 'debounce';
-// var debounce = require('debounce');
+const _ = require('lodash');
 
-var debounce = require('lodash.debounce');
-console.log(debounce);
+const refs = {
+  inputRef: document.querySelector('#exampleDataList'),
+  list: document.querySelector('.list'),
+};
 
-const inputRef = document.querySelector('#exampleDataList');
-
-inputRef.addEventListener(
+refs.inputRef.addEventListener(
   'input',
   _.debounce(event => {
-    console.log(event.data);
+    const inputText = event.target.value;
+
+    refs.list.innerHTML = '';
+    fetchCountries(inputText).then(countries => updateMarkup(countries));
   }, 500),
 );
-
-console.log('Hello from index.js-2');
-
-// fetch('https://restcountries.eu/rest/v2/name/eesti')
-//   .then(res => res.json())
-//   .then(data => console.log(data));
