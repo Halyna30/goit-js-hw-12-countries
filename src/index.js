@@ -1,5 +1,6 @@
 import './style.css';
 import fetchCountries from './js/fetch';
+import '../node_modules/toastr/build/toastr.css';
 
 const _ = require('lodash');
 
