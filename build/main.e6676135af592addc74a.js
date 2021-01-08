@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{QfWi:function(e,n,o){"use strict";o.r(n);o("JBxO"),o("FdtR");console.log("Hello from index.js-1");var t=o("9va6");document.querySelector("#exampleDataList").addEventListener("input",t.debounce((function(e){var n=e.target.value;fetch("https://restcountries.eu/rest/v2/name/"+n).then((function(e){return e.json()})).then((function(e){return console.log(e)}))}),500)),console.log("Hello from index.js-2")}},[["QfWi",1,2]]]);
-//# sourceMappingURL=main.e6676135af592addc74a.js.map

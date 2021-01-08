@@ -1,5 +1,5 @@
-import fetchCountries from './js/fetch.js';
-import updateMarkup from './js/update-markup';
+import './style.css';
+import fetchCountries from './js/fetch';
 
 const _ = require('lodash');
 
@@ -14,6 +14,6 @@ refs.inputRef.addEventListener(
     const inputText = event.target.value;
 
     refs.list.innerHTML = '';
-    fetchCountries(inputText).then(countries => updateMarkup(countries));
+    fetchCountries(inputText);
   }, 500),
 );

@@ -2,11 +2,15 @@
 <li class="listItem">
   <h2>{{nativeName}}</h2> 
       <img src="{{flag}}" width="200" alt="прапор {{nativeName}}">
-      <p>Столиця: {{capital}}</p>
+      <h3>Столиця: {{capital}}</h3>
     <p>Населення: {{population}} людей</p>
-    <p>Мова: {{languages}}</p>
+    {{#each languages}}
+      <p>Мова: {{this.name}}</p>
+    {{/each}}
     <p>Часовий пояс: {{timezones}}</p>
-    <p>Валюта: {{currencies}}</p>
+    {{#each currencies}}
+        <p>Валюта:{{this.name}}</p>
+    {{/each}}
     <p>Телефонний код країни: {{callingCodes}}</p>
     <p>Домен: {{alpha2Code}},{{alpha3Code}}</p>
 
